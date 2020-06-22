@@ -8,6 +8,13 @@ describe('coin counter', () => {
 
     expect(result.countRecursive(amount)).toEqual(0);
   });
+
+  test("should correctly return -1 if the amount is not a number", () => {
+    const amount = "apple";
+    const result = new Counter();
+
+    expect(result.countRecursive(amount)).toEqual(-1);
+  });
 });
 
 
